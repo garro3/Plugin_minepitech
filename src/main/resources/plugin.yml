@@ -14,3 +14,8 @@ commands:
     description: Donne une baguette qui lance des boules de feu
     usage: /clemBaguette
 
+  clemTimer:
+    description: Permet de mettre un timer
+    usage: /clemTimer <time in seconds>
+
+

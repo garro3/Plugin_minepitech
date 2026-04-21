@@ -12,7 +12,7 @@ import org.bukkit.inventory.ItemStack
 import org.bukkit.entity.Player
 
 
-class Baguette(private val baguetteItemService: BaguetteItemService) : CommandExecutor {
+class BaguetteCommand(private val baguetteItemService: BaguetteItemService) : CommandExecutor {
 
     private val mm = MiniMessage.miniMessage()
 

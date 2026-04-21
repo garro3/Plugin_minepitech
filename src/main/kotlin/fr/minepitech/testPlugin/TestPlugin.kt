@@ -2,8 +2,9 @@
 
 package fr.minepitech.testPlugin
 
-import fr.minepitech.testPlugin.command.Baguette
+import fr.minepitech.testPlugin.command.BaguetteCommand
 import fr.minepitech.testPlugin.command.FlyCommand
+import fr.minepitech.testPlugin.command.TimerCommand
 import fr.minepitech.testPlugin.manager.FlyProtectionManager
 import fr.minepitech.testPlugin.listener.BaguetteListener
 import fr.minepitech.testPlugin.listener.FlyListener
@@ -29,7 +30,8 @@ class TestPlugin : JavaPlugin() {
 
         // Enregistrer les commandes
         getCommand("clemFly")?.setExecutor(FlyCommand(flyProtectionManager))
-        getCommand("clemBaguette")?.setExecutor(Baguette(baguetteItemService))
+        getCommand("clemBaguette")?.setExecutor(BaguetteCommand(baguetteItemService))
+        getCommand("clemTimer")?.setExecutor(TimerCommand(this))
 
         // Enregistrer les listeners
         server.pluginManager.registerEvents(FlyListener(flyProtectionManager), this)
